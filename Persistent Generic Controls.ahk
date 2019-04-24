@@ -12,14 +12,14 @@ RETURN
     Send %Clipboard%
 RETURN
 
-; Convert text to upper
+; Convert text to lower
 ^!l::
     Send ^x
     StringLower Clipboard, Clipboard
     Send %Clipboard%
 RETURN
 
-; Convert text to capitalized
+; Convert text to title case
 ^!k::
     Send ^x
     StringUpper Clipboard, Clipboard, T
