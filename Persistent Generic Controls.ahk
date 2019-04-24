@@ -26,13 +26,6 @@ RETURN
     Send %Clipboard%
 RETURN
 
-; Minimize current window
-^!m::
-    Send !{space}
-    Sleep, 10
-    Send n
-RETURN
-
 ; Shrug emote
 :*:@shrug::
     send, ¯\_(ツ)_/¯
