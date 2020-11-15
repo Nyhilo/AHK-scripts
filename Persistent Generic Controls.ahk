@@ -34,7 +34,7 @@ RETURN
 RETURN
 
 ; Keyboard shortcut to set a window to be always on top
-^!t::  ;Ctrl+Alt+Space - it will append " - AlwaysOnTop" to windows when they are AlwaysOnTop
+^!t::  ;Ctrl+Alt+T - it will append " - AlwaysOnTop" to windows when they are AlwaysOnTop
     WinGetActiveTitle, t
     WinGet, ExStyle, ExStyle, %t%
     if (ExStyle & 0x8)
