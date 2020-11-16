@@ -1,11 +1,6 @@
-SendMode Input
+﻿SendMode Input
 
 ; KeyHistory
-
-; F13 on Mac keyboard to PrntScr
-F13::
-    Send, {PrintScreen}
-RETURN
 
 ; Convert text to upper
 ^!u::
@@ -34,7 +29,7 @@ RETURN
 RETURN
 
 ; Keyboard shortcut to set a window to be always on top
-^!t::  ;Ctrl+Alt+T - it will append " - AlwaysOnTop" to windows when they are AlwaysOnTop
+^!t::  ;Ctrl+Alt+Space - it will append " - AlwaysOnTop" to windows when they are AlwaysOnTop
     WinGetActiveTitle, t
     WinGet, ExStyle, ExStyle, %t%
     if (ExStyle & 0x8)
@@ -62,4 +57,16 @@ MouseIsOver(WinTitle) {
     WheelDown::Send {Volume_Down}
     MButton::Send {Media_Play_Pause}
 #if
+RETURN
+
+
+#MaxThreadsPerHotkey 2
+
+; Triggers Autoclicker
+F13::
+    Toggle := !Toggle
+    While Toggle{
+       click
+       sleep 30
+    }
 RETURN
